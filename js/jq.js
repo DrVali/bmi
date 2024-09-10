@@ -5,7 +5,8 @@
 		  height_parametr /= 100;
 		  let bmi_text = document.getElementById("bmi-text");
 		  let bmi = weight_parametr / (height_parametr * height_parametr) ;
-		
+		  
+		 if(!isNaN(weight_parametr) && !isNaN(height_parametr) ){
 		 if(bmi < 18.5 ){
 			 bmi_text.innerHTML="Underweight";
 		 }
@@ -24,10 +25,16 @@
 		  bmi_text.innerHTML="Obese";
 				 
 		 }
+		 }
+		 else {
+			 alert("please , insert numbers in text boxs");
+		 }
+    
+	  
     }
-
-
+	
 	function Reset(){
+	
 			 document.getElementById("weight").value= "";
 			 document.getElementById("height").innerHTML= "";
 			  document.getElementById("bmi-text").innerHTML= "";
